@@ -26,44 +26,62 @@ class Question
 
         console.log(this.question_p );
 
-        {
-            console.log( this.answers_p);
 
+this.answers_p.forEach
+(
+
+    function(element, e2=1)
+        {
+
+
+            console.log (e2 + " : " + element);
+            e2++
 
         }
+);
 
-
-        correctAns(indexCheck)
-        {
-            if (this.correctIndex_p === indexCheck)
-            {
-                console.log("True");
-                return (indexCheck);
-            }
-
-
-        }
 
     }
 
-    let q1 = new Question("What is the size of pants",[10,12,14],2);
-    let q2 = new Question("What is the size of shirt",[10,12,14],1);
-    let q3 = new Question("What is the size of shoes",[7,6,8],0);
 
-    available_question_list_array=[];
-    available_question_list_array.push(q1);
-    available_question_list_array.push(q2);
-    available_question_list_array.push(q3);
+    correctAns(indexCheck)
+    {
+        if (this.correctIndex_p === indexCheck)
+        {
+            alert("Good Job Right Answer!!");
 
-    console.log(available_question_list_array);
+        }
 
+       else
+        {
+            alert("Sorry Wrong Answer!!");
+        }
+    }
 
-// checking to see if the list of question populated in an array
+}
+
+let q1 = new Question("What is the size of pants",[10,12,14],2);
+let q2 = new Question("What is the size of shirt",[10,12,14],1);
+let q3 = new Question("What is the size of shoes",[7,6,8],0);
+
+available_question_list_array=[];
+available_question_list_array.push(q1);
+available_question_list_array.push(q2);
+available_question_list_array.push(q3);
+
+//console.log(available_question_list_array); // checking to see if the list of question populated in an array
 
 //Each answer should have a number displayed that the User can enter to pick an answer
 // (using the Question class method you implemented) (2 points).
 // Refer to image. (HINT: Use 0 - however many answers and use a ```Template String```
 // or simply concatenate the corresponding answer (+) to make a numbered answer in the console).
 
+let index_of_a_question = Math.floor(Math.random() * available_question_list_array.length);
 
-    console.log(q1.printQuestion());
+available_question_list_array[index_of_a_question].printQuestion();
+
+// #### Prompt the User to enter the number of what they think the correct answer is (1 point).
+// The user should input the corresponding number of the correct answer displayed in the JavaScript console.
+
+let userInput = new Question( parseInt (prompt("Enter Your Correct Choice '0','1' or '2' ")));
+available_question_list_array[index_of_a_question].correctAns(userInput);

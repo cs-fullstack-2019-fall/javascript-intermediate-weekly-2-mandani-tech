@@ -27,10 +27,12 @@ Create question instances manually in your JavaScript code. An example of creati
 
 ```let q1 = new Question('How many million miles is Earth from the Sun?',['123', '93', '150'], 1);```
 
-#### Load each question that you make/instantiate into an Available Question List array using any array method you choose to add the Questions as new elements in the array (1 point).
+#### Load each question that you make/instantiate into an Available Question List array using any array 
+method you choose to add the Questions as new elements in the array (1 point).
 
 #### Select one random question from your Available Question List array and log it to the console (0 points). 
-Your Question class should be able to output the question and the available answers (refer to image above). Use this code or similar to generate a random index number to use to get a Question from your Available Question List array:
+Your Question class should be able to output the question and the available answers (refer to image above). 
+Use this code or similar to generate a random index number to use to get a Question from your Available Question List array:
 ```
 // Pick a random question (CODE PROVIDED TO STUDENTS FOR RANDOM NUMBER GENERATION)
 let index_of_a_question = Math.floor(Math.random() * available_question_list_array.length);
@@ -42,7 +44,7 @@ The user should input the corresponding number of the correct answer displayed i
 #### Use your Question Class method that checks for a correct answer (1 point).
 Check if the User’s answer is correct and display an alert stating if they were right or not.
 
-![Sample Response to Incorrect Answer](https://github.com/cs-fullstack-master/javascript-intermediate-weekly-2/blob/master/2019-08-16_101424.png)
+![Sample Response to Incorrect Answer][]
 
 ### Challenges
 * Enhance the solution so that it will let the User keep answering questions until ‘q’ is entered (Bonus: handle any case lower/or upper that may be entered by the User).
@@ -51,3 +53,6 @@ Check if the User’s answer is correct and display an alert stating if they wer
 
 #### Notes
 - It's expected you know how to use git to push and pull your projects. You will not get ANY points if you push your work after 5pm.
+
+
+[]: https://github.com/cs-fullstack-master/javascript-intermediate-weekly-2/blob/master/2019-08-16_101424.png
